@@ -14,13 +14,13 @@ Function Replace-Umlaut {
  
     # create HashTable with replace map
     $characterMap = @{}
-    $characterMap.([Int][Char]'ä') = "ae"
-    $characterMap.([Int][Char]'ö') = "oe"
-    $characterMap.([Int][Char]'ü') = "ue"
-    $characterMap.([Int][Char]'ß') = "ss"
-    $characterMap.([Int][Char]'Ä') = "Ae"
-    $characterMap.([Int][Char]'Ü') = "Ue"
-    $characterMap.([Int][Char]'Ö') = "Oe"
+    $characterMap.([Int][Char]'ï¿½') = "ae"
+    $characterMap.([Int][Char]'ï¿½') = "oe"
+    $characterMap.([Int][Char]'ï¿½') = "ue"
+    $characterMap.([Int][Char]'ï¿½') = "ss"
+    $characterMap.([Int][Char]'ï¿½') = "Ae"
+    $characterMap.([Int][Char]'ï¿½') = "Ue"
+    $characterMap.([Int][Char]'ï¿½') = "Oe"
     
     # Replace chars
     ForEach ($key in $characterMap.Keys) {
@@ -34,7 +34,7 @@ Function Replace-Umlaut {
 
 Import-Module ActiveDirectory
 
-$OU= "OU=test,OU=Client Admins,OU=Admins,OU=REGA,DC=rega,DC=local"
+$OU= "OU=test,OU=Client Admins,OU=Admins,OU=xyz,DC=xyz,DC=local"
 write-host $OU
 
 
